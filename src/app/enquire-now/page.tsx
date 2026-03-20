@@ -11,8 +11,8 @@ export default function EnquireNow() {
     adults: '',
     children: '',
     accommodation: '3 Star Hotel',
-    package: '7 Days Varanasi Ayodhya Package',
-    budget: '20000',
+    package: 'Varanasi & Ayodhya Divine Tour (3N/4D)',
+    budget: '20,000',
     extraInfo: '',
     fullName: '',
     email: '',
@@ -118,9 +118,14 @@ export default function EnquireNow() {
             <div style={{ marginBottom: '20px' }}>
               <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600' }}>Interested In</label>
               <select name="package" value={formData.package} onChange={handleChange} style={{ width: '100%', padding: '12px', borderRadius: '5px', border: '1px solid #ddd' }}>
-                 <option>Varanasi Ayodhya Tour (2N/3D)</option>
-                 <option>Ayodhya Tour Package (1N/2D)</option>
-                 <option>7 Days Varanasi Ayodhya Package</option>
+                 <option>Varanasi & Prayagraj Day Excursion (2N/3D)</option>
+                 <option>Varanasi & Gaya Spiritual Journey (3N/4D)</option>
+                 <option>Varanasi & Prayagraj Stay Tour (3N/4D)</option>
+                 <option>Varanasi & Ayodhya Divine Tour (3N/4D)</option>
+                 <option>Varanasi Gaya & Prayagraj Pilgrimage (4N/5D)</option>
+                 <option>Varanasi Ayodhya & Prayagraj Essential (4N/5D)</option>
+                 <option>Grand UP & Chitrakoot Spiritual Circuit (7N/8D)</option>
+                 <option>Customized Tour Plan</option>
               </select>
             </div>
 
