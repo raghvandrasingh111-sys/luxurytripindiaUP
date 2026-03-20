@@ -47,7 +47,7 @@ export default function Footer() {
             <p style={{ margin: 0 }}>
               <i className="fas fa-map-marker-alt" style={{ color: 'var(--primary-orange)', marginRight: '8px' }}></i>
               <strong style={{ color: 'white' }}>Varanasi Office:</strong><br/>
-              41, Lohiya Nagar, Ashapur-Sarnath Road, Sarnath, Varanasi-221007
+              F2/30, Imlok -02 M Near Taj , Nadesar , varanasi
             </p>
             <p style={{ margin: 0 }}>
               <i className="fas fa-map-marker-alt" style={{ color: 'var(--primary-orange)', marginRight: '8px' }}></i>
