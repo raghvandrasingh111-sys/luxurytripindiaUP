@@ -170,6 +170,19 @@ export default function Home() {
             <h2 ref={addToRefs} className="fade-in-up" style={{ fontSize: '2.5rem', marginBottom: '10px' }}>Popular Destinations</h2>
             <p ref={addToRefs} className="fade-in-up" style={{ color: '#666' }}>Explore our Top Destinations voted by more than 1000+ Travelers</p>
           </div>
+          <div style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
+            gap: '20px' 
+          }}>
+            {[
+              { img: "https://varanasiayodhya.com/wp-content/uploads/Rectangle-5632.png-1.webp", alt: "Ancient Varanasi Ghats Spiritual View" },
+              { img: "https://varanasiayodhya.com/wp-content/uploads/Rectangle-5632-1.png-2-903x1024.webp", alt: "Divine Ayodhya Ram Mandir Temple Architecture" },
+              { img: "https://varanasiayodhya.com/wp-content/uploads/Rectangle-5632-2.png-2-903x1024.webp", alt: "Prayagraj Sangam Holy River Confluence" },
+              { img: "https://varanasiayodhya.com/wp-content/uploads/Rectangle-5634.png-1.webp", alt: "Spiritual Pilgrimage Tour in Uttar Pradesh" }
+            ].map((item, index) => (
+              <div key={index} ref={addToRefs} className="fade-in-up" style={{ 
+                height: '400px', 
                 borderRadius: '20px', 
                 overflow: 'hidden',
                 boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
@@ -182,8 +195,32 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured Packages (Now using official data) */}
+      <section className="section-padding" style={{ padding: '80px 5%', backgroundColor: '#fff' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+            <h2 ref={addToRefs} className="fade-in-up" style={{ fontSize: '2.5rem', marginBottom: '10px' }}>Our Featured Packages</h2>
+            <p ref={addToRefs} className="fade-in-up" style={{ color: '#666' }}>Curated spiritual journeys designed for comfort and elevation</p>
+          </div>
+          <div style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
+            gap: '40px' 
+          }}>
+            {featuredPackages.map((pkg, index) => (
+              <div key={index} ref={addToRefs} className="fade-in-up" style={{ transitionDelay: `${index * 0.1}s` }}>
+                <PackageCard {...pkg} />
+              </div>
+            ))}
+          </div>
+          <div style={{ textAlign: 'center', marginTop: '50px' }}>
+            <Link href="/tour-packages" className="btn-primary" style={{ padding: '15px 40px' }}>View All Packages</Link>
+          </div>
+        </div>
+      </section>
+
       {/* Trust Icons */}
-      <section style={{ padding: '60px 5%', backgroundColor: '#fff', borderTop: '1px solid #eee' }}>
+      <section style={{ padding: '60px 5%', backgroundColor: '#fcfcfc', borderTop: '1px solid #eee' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '40px' }}>
             {[
