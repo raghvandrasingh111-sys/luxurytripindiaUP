@@ -21,14 +21,14 @@ export default function Navbar() {
       left: 0,
       width: '100%',
       zIndex: 1000,
-      padding: scrolled ? '15px 5%' : '25px 5%',
-      backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.95)' : 'transparent',
-      boxShadow: scrolled ? '0 2px 10px rgba(0,0,0,0.1)' : 'none',
-      transition: 'all 0.3s ease',
+      padding: scrolled ? '10px 5%' : '20px 5%',
+      backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.98)' : 'transparent',
+      boxShadow: scrolled ? '0 4px 20px rgba(0,0,0,0.08)' : 'none',
+      transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
-      color: scrolled ? 'var(--dark-text)' : 'white'
+      backdropFilter: scrolled ? 'blur(10px)' : 'none'
     }}>
       <div className="logo" style={{ display: 'flex', alignItems: 'center' }}>
         <Link href="/">
@@ -36,10 +36,11 @@ export default function Navbar() {
             src="/logo-luxury.png" 
             alt="Luxury Trip India" 
             style={{ 
-              height: scrolled ? '50px' : '70px', 
+              height: scrolled ? '55px' : '85px', 
               width: 'auto',
-              transition: 'all 0.3s ease',
-              filter: scrolled ? 'none' : 'brightness(0) invert(1)' // Invert to white on transparent background
+              transition: 'all 0.4s ease',
+              // Dynamic filter to ensure visibility on all backgrounds
+              filter: scrolled ? 'none' : 'drop-shadow(0 0 10px rgba(255,255,255,0.5))'
             }} 
           />
         </Link>
@@ -48,26 +49,58 @@ export default function Navbar() {
       <ul style={{
         display: 'flex',
         listStyle: 'none',
-        gap: '30px',
+        gap: '35px',
         margin: 0,
         padding: 0,
-        fontWeight: '600'
+        fontWeight: '600',
+        alignItems: 'center'
       }}>
-        <li><Link href="/" style={{ color: 'inherit', textDecoration: 'none' }}>Home</Link></li>
-        <li><Link href="/tour-packages" style={{ color: 'inherit', textDecoration: 'none' }}>Tour Packages</Link></li>
-        <li><Link href="/hotels" style={{ color: 'inherit', textDecoration: 'none' }}>Hotels</Link></li>
+        {['Home', 'Tour Packages', 'Hotels'].map((item) => (
+          <li key={item}>
+            <Link 
+              href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`} 
+              style={{ 
+                color: scrolled ? '#1a1a1a' : 'white', 
+                textDecoration: 'none',
+                fontSize: '1.05rem',
+                transition: 'color 0.3s ease',
+                textShadow: scrolled ? 'none' : '0 2px 4px rgba(0,0,0,0.3)'
+              }}
+              className="nav-link"
+            >
+              {item}
+            </Link>
+          </li>
+        ))}
         <li>
           <Link href="/enquire-now" style={{
-            backgroundColor: 'var(--primary-orange)',
+            backgroundColor: '#FF8C00',
             color: 'white',
-            padding: '10px 20px',
-            borderRadius: '5px',
-            textDecoration: 'none'
-          }}>
+            padding: '12px 28px',
+            borderRadius: '50px',
+            textDecoration: 'none',
+            fontSize: '1rem',
+            fontWeight: '700',
+            boxShadow: '0 4px 15px rgba(255, 140, 0, 0.3)',
+            transition: 'all 0.3s ease'
+          }}
+          className="btn-enquire"
+          >
             Enquire Now
           </Link>
         </li>
       </ul>
+
+      <style jsx>{`
+        .nav-link:hover {
+          color: #FF8C00 !important;
+        }
+        .btn-enquire:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
+          background-color: #e67e00 !important;
+        }
+      `}</style>
     </nav>
   );
 }
