@@ -7,8 +7,6 @@ interface PackageCardProps {
   duration: string;
   location: string;
   title: string;
-  oldPrice: string;
-  newPrice: string;
   href: string;
 }
 
@@ -17,8 +15,6 @@ export default function PackageCard({
   duration,
   location,
   title,
-  oldPrice,
-  newPrice,
   href
 }: PackageCardProps) {
   return (

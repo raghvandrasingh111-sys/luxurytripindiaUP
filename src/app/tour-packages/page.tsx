@@ -11,8 +11,6 @@ export default function TourPackages() {
     duration: pkg.duration,
     location: pkg.location,
     title: pkg.name,
-    oldPrice: pkg.originalPrice,
-    newPrice: pkg.price,
     href: `/tour-packages/${pkg.slug}`
   }));
 
