@@ -2,24 +2,38 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Plan Your Customized Ayodhya Varanasi Tour Packages With Us",
-  description: "Plan Your Customized Ayodhya Varanasi Tour Packages With Us. We'll plan as per your budget and number of days you have. Contact us.",
+  metadataBase: new URL("https://varanasiayodhya.com"),
+  title: {
+    default: "Luxury Trip India | Best Ayodhya Varanasi Tour Packages 2026",
+    template: "%s | Luxury Trip India"
+  },
+  description: "Book customized Ayodhya Varanasi Tour Packages for 2026. Specialized in Ram Mandir Darshan, Kashi Vishwanath Spiritual Tours, and Prayagraj Sangam trips at best prices.",
+  keywords: ["Ayodhya Varanasi tour packages", "Varanasi Ayodhya tour package 2026", "Ram Mandir darshan tour", "Kashi Vishwanath temple tour", "Prayagraj Sangam tour", "Spiritual tours Uttar Pradesh"],
+  alternates: {
+    canonical: "./",
+  },
   openGraph: {
-    title: "Plan Your Customized Ayodhya Varanasi Tour Packages With Us",
-    description: "Plan Your Customized Ayodhya Varanasi Tour Packages With Us. We'll plan as per your budget and number of days you have. Contact us.",
+    title: "Luxury Trip India | Best Ayodhya Varanasi Tour Packages 2026",
+    description: "Experience the spiritual essence of UP with our curated Ayodhya and Varanasi tour packages. 24/7 support and customized itineraries.",
     url: "https://varanasiayodhya.com/",
-    siteName: "Varanasi Ayodhya",
+    siteName: "Luxury Trip India",
     images: [
       {
-        url: "https://varanasiayodhya.com/wp-content/uploads/image-444.png-1024x633.webp",
-        width: 1024,
-        height: 633,
-        alt: "Varanasi Tour Packages",
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Varanasi Ayodhya Spiritual Tour",
       },
     ],
     locale: "en_US",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Luxury Trip India | Ayodhya Varanasi Tour Packages",
+    description: "Book your spiritual journey to Ayodhya and Varanasi with expert guides and premium comfort.",
+    images: ["/og-image.jpg"],
+  }
 };
 
 export default function RootLayout({
@@ -39,6 +53,29 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Luxury Trip India",
+              "url": "https://varanasiayodhya.com",
+              "logo": "https://luxurytripindia.com/img/logo-luxury.png",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91-9999995475",
+                "contactType": "customer service",
+                "areaServed": "IN",
+                "availableLanguage": ["en", "Hindi"]
+              },
+              "sameAs": [
+                "https://www.facebook.com/profile.php?id=61564188934197",
+                "https://www.instagram.com/luxurytripindia"
+              ]
+            })
+          }}
+        />
         {children}
       </body>
     </html>

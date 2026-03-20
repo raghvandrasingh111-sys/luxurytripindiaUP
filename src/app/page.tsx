@@ -206,11 +206,11 @@ export default function Home() {
             gap: '20px' 
           }}>
             {[
-              "https://varanasiayodhya.com/wp-content/uploads/Rectangle-5632.png-1.webp",
-              "https://varanasiayodhya.com/wp-content/uploads/Rectangle-5632-1.png-2-903x1024.webp",
-              "https://varanasiayodhya.com/wp-content/uploads/Rectangle-5632-2.png-2-903x1024.webp",
-              "https://varanasiayodhya.com/wp-content/uploads/Rectangle-5634.png-1.webp"
-            ].map((img, index) => (
+              { img: "https://varanasiayodhya.com/wp-content/uploads/Rectangle-5632.png-1.webp", alt: "Ancient Varanasi Ghats Spiritual View" },
+              { img: "https://varanasiayodhya.com/wp-content/uploads/Rectangle-5632-1.png-2-903x1024.webp", alt: "Divine Ayodhya Ram Mandir Temple Architecture" },
+              { img: "https://varanasiayodhya.com/wp-content/uploads/Rectangle-5632-2.png-2-903x1024.webp", alt: "Prayagraj Sangam Holy River Confluence" },
+              { img: "https://varanasiayodhya.com/wp-content/uploads/Rectangle-5634.png-1.webp", alt: "Spiritual Pilgrimage Tour in Uttar Pradesh" }
+            ].map((item, index) => (
               <div key={index} ref={addToRefs} className="fade-in-up" style={{ 
                 height: '400px', 
                 borderRadius: '20px', 
@@ -218,7 +218,7 @@ export default function Home() {
                 boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
                 transitionDelay: `${index * 0.1}s`
               }}>
-                <img src={img} alt="Destination" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }} className="zoom-hover" />
+                <img src={item.img} alt={item.alt} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }} className="zoom-hover" />
               </div>
             ))}
           </div>
