@@ -30,21 +30,25 @@ export default function Navbar() {
       alignItems: 'center',
       backdropFilter: scrolled ? 'blur(15px)' : 'none'
     }}>
-      <div className="logo" style={{ 
+      <div className="logo-wrapper" style={{ 
         display: 'flex', 
         alignItems: 'center',
-        transform: scrolled ? 'scale(0.85)' : 'scale(1)',
+        padding: '5px 15px',
+        backgroundColor: scrolled ? 'transparent' : 'rgba(255, 255, 255, 0.9)',
+        borderRadius: '12px',
+        boxShadow: scrolled ? 'none' : '0 10px 25px rgba(0,0,0,0.15)',
+        transform: scrolled ? 'scale(0.8)' : 'scale(1)',
         transformOrigin: 'left center',
-        transition: 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)'
+        transition: 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)'
       }}>
-        <Link href="/">
+        <Link href="/" style={{ display: 'flex', alignItems: 'center' }}>
           <img 
             src="/logo-luxury.png" 
             alt="Luxury Trip India" 
             style={{ 
-              height: '80px', 
+              height: '70px', 
               width: 'auto',
-              filter: scrolled ? 'none' : 'drop-shadow(0 2px 10px rgba(0,0,0,0.2))'
+              display: 'block'
             }} 
           />
         </Link>
