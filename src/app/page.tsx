@@ -290,6 +290,81 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why Choose Us & Content Expansion */}
+      <section className="section-padding" style={{ backgroundColor: '#f9fafb', padding: '100px 5%' }}>
+        <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '60px' }}>
+            <div ref={addToRefs} className="fade-in-up">
+              <h2 style={{ fontSize: '2.5rem', marginBottom: '25px', color: '#1a1a1a' }}>Why Choose Luxury Trip India?</h2>
+              <p style={{ fontSize: '1.1rem', color: '#4b5563', lineHeight: '1.8', marginBottom: '20px' }}>
+                At Luxury Trip India, we specialize in crafting the most immersive and **Customized Ayodhya Varanasi Tour Packages** tailored to your spiritual and logistical needs. Our team understands that a journey to the heart of Uttar Pradesh is more than just a vacation; it's a soul-stirring experience that connects you with centuries of heritage.
+              </p>
+              <p style={{ fontSize: '1.1rem', color: '#4b5563', lineHeight: '1.8', marginBottom: '20px' }}>
+                Whether you are looking for a quick 2-day trip or an extensive spiritual circuit, our **Ayodhya Varanasi Tour Packages** offer unmatched comfort, expert guides, and seamless transfers. We pride ourselves on our local knowledge, ensuring you witness the Ganga Aarti from the best vantage points and visit the most divine temples without the stress of planning.
+              </p>
+              <ul style={{ listStyle: 'none', padding: 0 }}>
+                {['Expert Local Guides', '24/7 On-Ground Support', 'Comfortable AC Vehicles', 'Handpicked Luxury Accommodations'].map((item, i) => (
+                  <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px', color: '#1a1a1a', fontWeight: '600' }}>
+                    <i className="fas fa-check-circle" style={{ color: 'var(--primary-orange)' }}></i> {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div ref={addToRefs} className="fade-in-up" style={{ backgroundColor: 'white', padding: '40px', borderRadius: '30px', boxShadow: '0 20px 40px rgba(0,0,0,0.05)' }}>
+              <h3 style={{ fontSize: '1.8rem', marginBottom: '20px', color: '#1a1a1a' }}>Spiritual Highlights</h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
+                <div>
+                  <h4 style={{ color: 'var(--primary-orange)', fontWeight: '700', fontSize: '1.1rem' }}>Varanasi (Kashi)</h4>
+                  <p style={{ fontSize: '0.95rem', color: '#666', marginTop: '5px' }}>Experience the timeless rituals at Dashashwamedh Ghat and the serenity of <Link href="/tour-packages" style={{ color: 'inherit', textDecoration: 'underline' }}>Sarnath</Link> where Buddha preached his first sermon.</p>
+                </div>
+                <div>
+                  <h4 style={{ color: 'var(--primary-orange)', fontWeight: '700', fontSize: '1.1rem' }}>Ayodhya (Ram Janmabhoomi)</h4>
+                  <p style={{ fontSize: '0.95rem', color: '#666', marginTop: '5px' }}>Visit the grand <Link href="/tour-packages" style={{ color: 'inherit', textDecoration: 'underline' }}>Ram Mandir</Link>, Hanuman Garhi, and the holy banks of the Saryu River in the birthplace of Lord Rama.</p>
+                </div>
+                <div>
+                  <h4 style={{ color: 'var(--primary-orange)', fontWeight: '700', fontSize: '1.1rem' }}>Prayagraj (Sangam)</h4>
+                  <p style={{ fontSize: '0.95rem', color: '#666', marginTop: '5px' }}>Witness the sacred confluence of Ganga, Yamuna, and mythical Saraswati, a must-visit for every <Link href="/tour-packages" style={{ color: 'inherit', textDecoration: 'underline' }}>spiritual seeker</Link>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section for SEO */}
+      <section className="section-padding" style={{ padding: '80px 5%' }}>
+        <div className="container" style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <h2 ref={addToRefs} className="fade-in-up" style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '50px' }}>Frequently Asked Questions</h2>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            {[
+              { 
+                q: "What is the best time to visit Varanasi and Ayodhya?", 
+                a: <>The best time is from October to March when the weather is pleasant for sightseeing and attending the outdoor Ganga Aarti. Check our <Link href="/tour-packages" style={{ color: 'var(--primary-orange)', textDecoration: 'underline' }}>Tour Packages</Link> for seasonal offers.</>
+              },
+              { 
+                q: "Do you provide customized Ayodhya Varanasi tour packages?", 
+                a: <>Yes, we specialize in tailoring your itinerary based on your preferences, budget, and time constraints. Simply fill out our <Link href="/enquire-now" style={{ color: 'var(--primary-orange)', textDecoration: 'underline' }}>Enquiry form</Link>.</>
+              },
+              { 
+                q: "Is Ayodhya safe for senior citizens?", 
+                a: <>Absolutely. We provide dedicated support and comfortable transportation to ensure senior citizens have a hassle-free and divine experience. Visit our <Link href="/hotels" style={{ color: 'var(--primary-orange)', textDecoration: 'underline' }}>hotels</Link> section for elderly-friendly stays.</>
+              },
+              { 
+                q: "How many days are enough for a trip to Varanasi, Prayagraj, and Ayodhya?", 
+                a: <>A 4-5 day tour is ideal to cover the major spiritual landmarks across these three holy cities at a comfortable pace. See our <Link href="/tour-packages" style={{ color: 'var(--primary-orange)', textDecoration: 'underline' }}>Essential UP tour</Link> for details.</>
+              }
+            ].map((faq, index) => (
+              <div key={index} ref={addToRefs} className="fade-in-up" style={{ borderBottom: '1px solid #eee', paddingBottom: '20px' }}>
+                <h4 style={{ fontSize: '1.1rem', marginBottom: '10px', color: '#1a1a1a', display: 'flex', gap: '10px' }}>
+                  <span style={{ color: 'var(--primary-orange)' }}>Q:</span> {faq.q}
+                </h4>
+                <div style={{ color: '#666', fontSize: '1rem', lineHeight: '1.6', paddingLeft: '30px' }}>{faq.a}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <ApprovalCarousel />
       <Testimonials />
 

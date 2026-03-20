@@ -63,6 +63,28 @@ export default function Footer() {
         </div>
 
         <div className="footer-col">
+          <h3 style={{ color: 'white', marginBottom: '25px', fontSize: '1.2rem', fontWeight: '600' }}>Popular Packages</h3>
+          <ul style={{ listStyle: 'none', padding: 0, color: 'rgba(255,255,255,0.6)', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <li><Link href="/tour-packages/varanasi-ayodhya-divine-tour-3n-4d" style={{ color: 'inherit', textDecoration: 'none' }} className="footer-link">Varanasi Ayodhya Divine Tour</Link></li>
+            <li><Link href="/tour-packages/varanasi-gaya-spiritual-journey-3n-4d" style={{ color: 'inherit', textDecoration: 'none' }} className="footer-link">Varanasi & Gaya Journey</Link></li>
+            <li><Link href="/tour-packages/varanasi-prayagraj-essential-4n-5d" style={{ color: 'inherit', textDecoration: 'none' }} className="footer-link">Varanasi & Prayagraj Essential</Link></li>
+            <li><Link href="/tour-packages/grand-up-chitrakoot-circuit-7n-8d" style={{ color: 'inherit', textDecoration: 'none' }} className="footer-link">Grand UP & Chitrakoot Circuit</Link></li>
+            <li><Link href="/tour-packages" style={{ color: 'var(--primary-orange)', textDecoration: 'none', fontWeight: 'bold' }} className="footer-link">View All Packages →</Link></li>
+          </ul>
+        </div>
+
+        <div className="footer-col">
+          <h3 style={{ color: 'white', marginBottom: '25px', fontSize: '1.2rem', fontWeight: '600' }}>Quick Links</h3>
+          <ul style={{ listStyle: 'none', padding: 0, color: 'rgba(255,255,255,0.6)', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <li><Link href="/" style={{ color: 'inherit', textDecoration: 'none' }} className="footer-link">Home</Link></li>
+            <li><Link href="/tour-packages" style={{ color: 'inherit', textDecoration: 'none' }} className="footer-link">Tour Packages</Link></li>
+            <li><Link href="/hotels" style={{ color: 'inherit', textDecoration: 'none' }} className="footer-link">Hotels</Link></li>
+            <li><Link href="/enquire-now" style={{ color: 'inherit', textDecoration: 'none' }} className="footer-link">Enquire Now</Link></li>
+            <li><Link href="/privacy-policy" style={{ color: 'inherit', textDecoration: 'none' }} className="footer-link">Privacy Policy</Link></li>
+          </ul>
+        </div>
+
+        <div className="footer-col">
           <h3 style={{ color: 'white', marginBottom: '25px', fontSize: '1.2rem', fontWeight: '600' }}>Working Time</h3>
           <ul style={{ listStyle: 'none', padding: 0, color: 'rgba(255,255,255,0.6)', marginBottom: '25px' }}>
             <li style={{ marginBottom: '8px' }}>Mon - Sat - <span style={{ color: 'white' }}>08:00 AM - 08:00 PM</span></li>

@@ -33,6 +33,9 @@ export const metadata: Metadata = {
     title: "Luxury Trip India | Ayodhya Varanasi Tour Packages",
     description: "Book your spiritual journey to Ayodhya and Varanasi with expert guides and premium comfort.",
     images: ["/og-image.jpg"],
+  },
+  icons: {
+    apple: "/apple-touch-icon.png",
   }
 };
 
