@@ -192,37 +192,6 @@ export const packages: TourPackage[] = [
       { category: "Super Deluxe", pax2: "17,100/-", pax4: "12,900/-", pax6: "11,700/-", pax8: "On Demand", pax10: "On Demand", pax12: "On Demand" },
       { category: "Luxury", pax2: "19,300/-", pax4: "14,700/-", pax6: "13,600/-", pax8: "On Demand", pax10: "On Demand", pax12: "On Demand" }
     ]
-  },
-  {
-    slug: "grand-up-and-chitrakoot-tour-6n-7d",
-    name: "Grand UP & Chitrakoot Tour",
-    duration: "6 Nights / 7 Days",
-    location: "Varanasi - 3N, Ayodhya - 1N, Prayagraj - 1N, Chitrakoot - 1N",
-    price: "11,100",
-    originalPrice: "25,250",
-    description: "The most comprehensive spiritual tour covering Varanasi, Ayodhya, Lucknow, Naimisharanya, Prayagraj, and Chitrakoot.",
-    image: "https://images.unsplash.com/photo-1702888636184-e4070a2f7c0a?auto=format&fit=crop&q=80&w=1200",
-    images: [
-      "https://images.unsplash.com/photo-1702888636184-e4070a2f7c0a?auto=format&fit=crop&q=80&w=1200",
-      "https://images.unsplash.com/photo-1710429814573-7f07a792cba2?auto=format&fit=crop&q=80&w=1200",
-      "https://images.unsplash.com/photo-1590492576395-58a40306771d?auto=format&fit=crop&q=80&w=1200"
-    ],
-    inclusions: ["Arrival/Departure Assistance", "Hotel Accommodation (Breakfast)", "Private AC Vehicle", "Toll, Parking, Driver Allowance"],
-    itinerary: [
-      { day: 1, title: "Arrive Varanasi", activities: ["On arrival meet & assistance at Varanasi airport/ Railway station. Proceed to Varanasi check-in to the hotel. Overnight stay at the hotel."], image: "https://images.unsplash.com/photo-1763186534213-a3ce3ec7e9b3?auto=format&fit=crop&q=80&w=1200" },
-      { day: 2, title: "Varanasi – Ayodhya", activities: ["After breakfast Proceed to Ayodhya. Arrive at Ayodhya & visit Ram Janambhoomi – the birthplace of lord Rama and other temples. It’s one of the seven most sacred cities of ancient India. Nageshnath temple. Hanumangarhi, Ram Ki Padi."], image: "https://images.unsplash.com/photo-1706169599121-4182eb12fbef?auto=format&fit=crop&q=80&w=1200" },
-      { day: 3, title: "Ayodhya - Lucknow - City Tour", activities: ["After breakfast, proceed for Lucknow and check-in to the hotel. Later Proceed for Lucknow city tour and visit Bara Imambara, Bhul Bhulaiya, Chhota imambara, Clock tower, Kaiserbagh Palace, & Shah Najaf Imambara. Later return to the hotel evening free at leisure & Overnight stay at hotel."], image: "https://images.unsplash.com/photo-1702888636184-e4070a2f7c0a?auto=format&fit=crop&q=80&w=1200" },
-      { day: 4, title: "Lucknow – Naimisharanya - Prayagraj", activities: ["Morning after breakfast drive to Naimisharanya. Upon arrival, sites are visited over there. Naimisharanya, it is the holy place and renowned since the time of Satya Yuga or Treta Yug, the most ancient times. It is believed that after visiting this sacred place, people can get rid of their sins. After visiting Naimisharanya, people attain Moksha (liberation) and attain immense powers. These all things and their importance are described in various ancient scriptures of India. Naimisharanya is also popularly known as Naimish or Neemsar or Neemshaar. Naimisharanya is the birthplace of many puranas and this place is the abode of all of the holy places on the earth and to visit only this place equals visiting all holy places at once. This evidence is found in The Mahaabhaarat. Also the renowned sant Goswami Tulasi Das described the prominence of Naimisharanya in Ram Charith Maanas. Later start drive to Prayagraj check-in to the hotel .Overnight stay."], image: "https://images.unsplash.com/photo-1725951602381-3e759a5ce430?auto=format&fit=crop&q=80&w=1200" },
-      { day: 5, title: "Prayagraj – Chitrakoot", activities: ["Early this morning, proceed to Sangam & enjoy boat ride(Optional) and have a sacred bath in Triveni Sangam is the confluence of three of the holiest rivers in Hindu mythology – Ganga, Yamuna and the mythical Saraswati. At the Sangam, the waters of the Ganges and the Yamuna can be distinctly seen to merge into one. Later visit Hanuman Temple. Later Come back to the hotel to have breakfast & check-out. Later they started to drive to Chitrakoot - According to Hindu Mythology Lord Rama, Sita and Lakshman spent eleven and half years of their fourteen years of exile. Later in the evening visit Ram Ghat situated at the bank of River Mandakini."], image: "https://images.unsplash.com/photo-1675788462399-bcde574140b0?auto=format&fit=crop&q=80&w=1200" },
-      { day: 6, title: "Chitrakoot - Varanasi", activities: ["Today after breakfast you will proceed for a city tour of Chitrakoot and visit Hanuman Dhara, Janaki kund, Kamadgiri temple, Sati Anusuya, sphatik shila & Gupt Godavari. Later check-out from the hotel and drive to Varanasi. Up-on arrival check-in to the hotel."], image: "https://images.unsplash.com/photo-1590492576395-58a40306771d?auto=format&fit=crop&q=80&w=1200" },
-      { day: 7, title: "Varanasi – Full day city tour", activities: ["Early this morning, we will be taken for a boat ride on the Ganges. It is a mystical and spiritual experience as you watch people offering water to the Sun God and devotees taking holy dip in the Ganges. Experience the different ghats of Varanasi. Each ghats has its own history and Hinduism value. Later come back to the hotel for breakfast & proceed for a half day temple tour of Varanasi visiting Bharat Mata (Mother India) Mandir, Durga, Tulsi Manas, Sankat Mochan Temple and the new Vishwanath Temple. Later Afternoon Visit Sarnath and Evening Ganga Aarti at Dashashwamedh Ghat."], image: "https://images.unsplash.com/photo-1691842208155-9460efbbbde8?auto=format&fit=crop&q=80&w=1200" },
-      { day: 8, title: "Departure", activities: ["Today on time transfer to Airport/ Railway station for an onward journey with beautiful memories of your holiday."], image: "https://images.unsplash.com/photo-1701619878991-716d8fbb319f?auto=format&fit=crop&q=80&w=1200" }
-    ],
-    pricingTable: [
-      { category: "Deluxe", pax2: "25,250/-", pax4: "16,800/-", pax6: "11,100/-", pax8: "On Demand", pax10: "On Demand", pax12: "On Demand" },
-      { category: "Super Deluxe", pax2: "28,100/-", pax4: "23,000/-", pax6: "20,500/-", pax8: "On Demand", pax10: "On Demand", pax12: "On Demand" },
-      { category: "Luxury", pax2: "30,700/-", pax4: "25,400/-", pax6: "23,500/-", pax8: "On Demand", pax10: "On Demand", pax12: "On Demand" }
-    ]
   }
 ];
 
