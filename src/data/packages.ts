@@ -110,7 +110,6 @@ export const packages: TourPackage[] = [
     itinerary: [
       { day: 1, title: "Varanasi Arrival", activities: ["Varanasi pickup", "Ganga Aarti", "Stay in Varanasi"] },
       { day: 2, title: "Kashi Darshan", activities: ["Subah-e-Banaras", "Kashi Vishwanath Temple", "Sarnath", "Stay in Varanasi"] }
-      // Additional days included in detailed dynamic logic
     ]
   },
   {
@@ -130,54 +129,6 @@ export const packages: TourPackage[] = [
     ]
   },
   {
-    slug: "char-dham-yatra",
-    name: "Sacred Char Dham Yatra",
-    duration: "10 Nights / 11 Days",
-    location: "Uttarakhand",
-    price: "34,999",
-    originalPrice: "45,000",
-    description: "Soul-cleansing pilgrimage to Yamunotri, Gangotri, Kedarnath, and Badrinath.",
-    image: "/images/char-dham.png",
-    inclusions: ["Mountain Transport", "Temple Priority", "Veg Meals", "Stay at Base Camps"],
-    itinerary: [
-      { day: 1, title: "Haridwar Arrival", activities: ["Meet at Haridwar", "Evening Ganga Aarti at Har-ki-Pauri", "Orientation"] },
-      { day: 2, title: "Haridwar to Barkot", activities: ["Mountain drive", "Evening relaxation"] },
-      { day: 3, title: "Yamunotri Trek", activities: ["Janki Chatti to Yamunotri", "Holy Snan", "Return to Barkot"] }
-    ]
-  },
-  {
-    slug: "golden-triangle-heritage-tour",
-    name: "Golden Triangle Heritage Tour",
-    duration: "5 Nights / 6 Days",
-    location: "Delhi | Agra | Jaipur",
-    price: "16,999",
-    originalPrice: "22,000",
-    description: "Discover the architectural wonders of Delhi, the Taj Mahal, and the Pink City.",
-    image: "/images/golden-triangle.png",
-    inclusions: ["Agra Heritage Walk", "Amer Fort Jeep Ride", "Luxury AC Car", "4-Star Stays"],
-    itinerary: [
-      { day: 1, title: "Delhi Arrival", activities: ["Airport Pickup", "Rest at Hotel"] },
-      { day: 2, title: "Delhi Sightseeing", activities: ["Red Fort", "Qutub Minar", "India Gate", "Drive to Agra"] },
-      { day: 3, title: "Taj Mahal & Jaipur", activities: ["Sunrise at Taj Mahal", "Agra Fort", "Drive to Jaipur"] }
-    ]
-  },
-  {
-    slug: "royal-rajasthan-heritage-tour",
-    name: "Royal Rajasthan Heritage Tour",
-    duration: "7 Nights / 8 Days",
-    location: "Royal Heritage",
-    price: "21,999",
-    originalPrice: "28,000",
-    description: "Experience the royal luxury and vibrant culture of the land of Kings.",
-    image: "/images/rajasthan.png",
-    inclusions: ["Desert Camp", "Camel Safari", "Heritage Hotels", "Private Car"],
-    itinerary: [
-      { day: 1, title: "Jaipur Arrival", activities: ["Pickup", "Stay in Heritage Hotel"] },
-      { day: 2, title: "Pink City Tour", activities: ["Amer Fort", "City Palace", "Hawa Mahal", "Jantar Mantar"] },
-      { day: 3, title: "Jaipur to Jodhpur", activities: ["Drive to Blue City", "Mehrangarh Fort", "Stay in Jodphur"] }
-    ]
-  },
-  {
     slug: "blissful-bihar-discovery",
     name: "Blissful Bihar Discovery",
     duration: "4 Nights / 5 Days",
@@ -191,38 +142,6 @@ export const packages: TourPackage[] = [
       { day: 1, title: "Patna Arrival", activities: ["Pickup", "Golgadh Visit", "Bihar Museum"] },
       { day: 2, title: "Patna to Nalanda & Rajgir", activities: ["Nalanda University Ruins", "Vishwa Shanti Stupa", "Hot Springs"] },
       { day: 3, title: "Bodhgaya Arrival", activities: ["Transfer to Bodhgaya", "Evening Meditation"] }
-    ]
-  },
-  {
-    slug: "lush-uttarakhand-escape",
-    name: "Lush Uttarakhand Escape",
-    duration: "5 Nights / 6 Days",
-    location: "Scenic Temples",
-    price: "13,999",
-    originalPrice: "18,000",
-    description: "Escape to the serene hills and holy rivers of the Land of Gods.",
-    image: "/images/uttarakhand.png",
-    inclusions: ["Hill Station Hotels", "Scenic Drives", "River Rafting (Optional)", "Temple Visits"],
-    itinerary: [
-      { day: 1, title: "Rishikesh Arrival", activities: ["Ganga Aarti", "Stay in Resort"] },
-      { day: 2, title: "Rishikesh to Mussoorie", activities: ["Kempty Falls", "Mall Road", "Stay in Mussoorie"] },
-      { day: 3, title: "Dhanaulti Day Trip", activities: ["Eco Park", "Surkanda Devi Temple"] }
-    ]
-  },
-  {
-    slug: "himachal-serenity-tour",
-    name: "Himachal Serenity Tour",
-    duration: "6 Nights / 7 Days",
-    location: "Shimla | Manali",
-    price: "18,999",
-    originalPrice: "24,000",
-    description: "Discover the snow-capped peaks and pine forests of Himachal Pradesh.",
-    image: "/images/himachal.png",
-    inclusions: ["Valley Resorts", "Private Cab", "Solang Valley Trip", "Breakfast & Dinner"],
-    itinerary: [
-      { day: 1, title: "Chandigarh to Shimla", activities: ["Airport Pickup", "Drive to Shimla", "Overnight stay"] },
-      { day: 2, title: "Shimla Local", activities: ["Kufri", "Mall Road", "The Ridge"] },
-      { day: 3, title: "Shimla to Manali", activities: ["Scenic drive through Kullu valley", "Pandoh Dam"] }
     ]
   }
 ];
