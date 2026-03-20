@@ -64,10 +64,10 @@ export default function PackageCard({
         
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 'auto' }}>
           <div>
-            <div style={{ textDecoration: 'line-through', color: '#888', fontSize: '0.9rem' }}>₹{oldPrice} /-</div>
-            <div style={{ fontWeight: 'bold', fontSize: '1.3rem', color: '#2B3036' }}>
-              ₹{newPrice} <span style={{ fontSize: '0.85rem', fontWeight: 'normal', color: '#666' }}>/Person</span>
+            <div style={{ fontWeight: 'bold', fontSize: '1.2rem', color: '#B49122' }}>
+              Enquire for Price
             </div>
+            <div style={{ fontSize: '0.85rem', color: '#666' }}>Best Rates Guaranteed</div>
           </div>
           <Link href={href} className="btn-primary" style={{ padding: '10px 20px', fontSize: '0.9rem', borderRadius: '5px', textTransform: 'none' }}>
             View Package

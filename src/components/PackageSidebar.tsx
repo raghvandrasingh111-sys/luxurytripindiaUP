@@ -18,10 +18,9 @@ export default function PackageSidebar({ price, originalPrice, duration, inclusi
           <div className="badge">Best Offers</div>
         </div>
         <div className="pricing">
-          <span className="old-price">₹ {originalPrice}</span>
-          <span className="current-price">₹ {price}/-*</span>
+          <span className="current-price" style={{ fontSize: '1.8rem' }}>Price on Enquiry</span>
         </div>
-        <p className="price-info">*Per person on twin sharing basis</p>
+        <p className="price-info">Contact us for the best customized rates</p>
         
         <button className="cta-button" onClick={() => window.open(`https://wa.me/919999995475?text=I'm interested in the Package: ${duration} trip`, '_blank')}>
           ENQUIRE NOW!
