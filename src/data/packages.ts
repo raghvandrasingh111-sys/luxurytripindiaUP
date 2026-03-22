@@ -30,6 +30,9 @@ export interface TourPackage {
   itinerary: ItineraryDay[];
   inclusions: string[];
   pricingTable?: PricingCategory[];
+  whyChooseUs?: string[];
+  faqs?: { q: string; a: string }[];
+  seoContent?: string;
 }
 
 export const packages: TourPackage[] = [
@@ -57,7 +60,31 @@ export const packages: TourPackage[] = [
     pricingTable: [
       { category: "Deluxe", pax2: "7,950/-", pax4: "6,400/-", pax6: "5,975/-", pax8: "On Demand", pax10: "On Demand", pax12: "On Demand" },
       { category: "Super Deluxe", pax2: "8,900/-", pax4: "7,400/-", pax6: "6,900/-", pax8: "On Demand", pax10: "On Demand", pax12: "On Demand" }
-    ]
+    ],
+    whyChooseUs: [
+      "Expert Local Guides: Our certified guides are specialized in Kashi's history and Vedic traditions, ensuring a deep spiritual connection.",
+      "Premium AC Vehicles: Travel in sanitized, luxury sedans or SUVs with professional, courteous drivers who know every shortcut.",
+      "Seamless VIP Logistics: We coordinate VIP Darshan entries and boat rides to ensure you don't waste a minute in queues.",
+      "Customized Itineraries: Every tour can be adjusted for your specific spiritual goals, including Pind Daan or special Havans.",
+      "Transparent Service: No hidden costs. Our packages include all tolls, parking fees, and taxes with a best-price guarantee."
+    ],
+    faqs: [
+      { q: "Is 3 days sufficient to cover both Varanasi and Prayagraj?", a: "Yes, our 100% optimized itinerary ensures you experience the core essence of both cities. We cover Varanasi's Kashi Vishwanath circuit on Day 1, the Sangam excursion on Day 2, and the Sarnath peace trail on Day 3." },
+      { q: "Do you arrange for Pind Daan rituals in Prayagraj?", a: "Absolutely. We can arrange for experienced priests at the Triveni Sangam for Pind Daan, Shraddha, or any other specific religious rituals you wish to perform." },
+      { q: "What is the best time for the Varanasi Prayagraj tour?", a: "The ideal time is between October and March when the weather is cool. However, for those seeking the ultimate spiritual experience, the Kartik Purnima or Dev Deepawali periods are truly magical." }
+    ],
+    seoContent: `
+      <p>Embark on the ultimate <strong>Varanasi Prayagraj Tour Package 3 Days</strong>, a journey designed for seekers of peace, history, and divine energy. Varanasi, also known as Kashi, is the world's oldest living city, where every stone tells a story of ancient Vedic wisdom. Our specialized 3-day itinerary perfects the balance between spiritual intensity and modern comfort.</p>
+      
+      <h3>The Spiritual Significance of Kashi Vishwanath</h3>
+      <p>Your journey begins at the heart of the galaxy—the Kashi Vishwanath Temple. Representing one of the twelve Jyotirlingas, this temple is the destination of a lifetime for millions. Our guides facilitate your visit to ensure a peaceful experience amidst the divine energy of Lord Shiva. Following the temple visit, the evening Ganga Aarti at Dashashwamedh Ghat offers a sensory masterpiece of fire, chants, and devotion that remains etched in memory.</p>
+      
+      <h3>Prayagraj: The Confluence of the Holy Rivers</h3>
+      <p>On the second day, we take you to the sacred city of Prayagraj. The highlight is the <strong>Triveni Sangam</strong>, the mystical confluence of the Ganga, Yamuna, and the invisible Saraswati. Taking a holy dip here is believed to cleanse the soul and grant liberation. Beyond the Sangam, you will explore the historical Allahabad Fort and the poignant Anand Bhawan, the ancestral home of the Nehru-Gandhi family.</p>
+      
+      <h3>Why Luxury Trip India?</h3>
+      <p>As a premier <strong>Varanasi Spiritual Travel Agency</strong>, we understand that pilgrimage is more than just sightseeing—it is a soul-stirring experience. We prioritize your serenity by handling all logistics, from station pickups to luxury hotel stays. Whether you are traveling for <em>Varanasi pilgrimage package with hotel</em> or a quick weekend spiritual break, our expertise ensures you return home transformed.</p>
+    `
   },
   {
     slug: "varanasi-gaya-spiritual-tour-3n-4d",
@@ -85,7 +112,26 @@ export const packages: TourPackage[] = [
       { category: "Deluxe", pax2: "12,500/-", pax4: "9,100/-", pax6: "8,250/-", pax8: "On Demand", pax10: "On Demand", pax12: "On Demand" },
       { category: "Super Deluxe", pax2: "13,750/-", pax4: "10,200/-", pax6: "9,450/-", pax8: "On Demand", pax10: "On Demand", pax12: "On Demand" },
       { category: "Luxury", pax2: "14,900/-", pax4: "11,550/-", pax6: "10,600/-", pax8: "On Demand", pax10: "On Demand", pax12: "On Demand" }
-    ]
+    ],
+    whyChooseUs: [
+      "Vedic Ritual Specialists: We coordinate with local pujaris in Gaya to ensure your rituals are performed with the highest scriptural integrity.",
+      "Reliable Logistics: Long drives between Gaya and Kashi are made comfortable in our modern, climate-controlled cruisers.",
+      "Handpicked Hotels: We only book hotels that are verified for cleanliness, vegetarian cuisine, and proximity to sacred sites.",
+      "Comprehensive Care: From arrival at Bodhgaya to departure from Kashi, we manage every detail so you can focus on your prayer."
+    ],
+    faqs: [
+      { q: "How much time is required for Pind Daan in Gaya?", a: "Typically, the Pind Daan rituals take about 3-4 hours. Our 4-day itinerary ensures you have ample time to perform these sacred rites at the Vishnupad Temple and other key altars." },
+      { q: "Is the road between Varanasi and Gaya safe for night travel?", a: "We prioritize safety and generally avoid long night drives. Our tour is scheduled to ensure all major intercity travel happens during daylight hours." }
+    ],
+    seoContent: `
+      <p>The <strong>Varanasi Gaya Spiritual Tour</strong> is a bridge between the two most sacred destinations for ancestor worship and spiritual liberation in India. This 4-day circuit is essential for those seeking to perform Pind Daan or simply experience the profound silence of Bodhgaya and the vibrant energy of Kashi.</p>
+      
+      <h3>Bodhgaya: The Seat of Enlightenment</h3>
+      <p>Your journey begins in Bodhgaya, where Prince Siddhartha became the Buddha. The Mahabodhi Temple, a UNESCO World Heritage site, is the centerpiece of this spiritual retreat. Sitting under the Bodhi Tree, you will feel a sense of peace that is unique to this corner of the world. Our tour gives you the time to meditate and explore the diverse monasteries that represent Buddhist traditions from around the globe.</p>
+      
+      <h3>Varanasi: The City of Eternal Light</h3>
+      <p>From the silence of Gaya, we transition to the rhythmic chants of Varanasi. The connection between Gaya and Varanasi is deep-rooted in Indian tradition. After honoring ancestors in Gaya, visiting the Kashi Vishwanath Temple in Varanasi is seen as the completion of a sacred cycle. Our 4-day Varanasi Gaya itinerary ensures that you experience the Ganga Aarti, the ancient ghats, and the narrow, mystical alleys of Kashi with expert local insights.</p>
+    `
   },
   {
     slug: "varanasi-prayagraj-stay-3n-4d",
@@ -113,7 +159,22 @@ export const packages: TourPackage[] = [
       { category: "Deluxe", pax2: "11,500/-", pax4: "8,900/-", pax6: "7,800/-", pax8: "On Demand", pax10: "On Demand", pax12: "On Demand" },
       { category: "Super Deluxe", pax2: "12,900/-", pax4: "10,200/-", pax6: "9,200/-", pax8: "On Demand", pax10: "On Demand", pax12: "On Demand" },
       { category: "Luxury", pax2: "14,200/-", pax4: "11,550/-", pax6: "10,500/-", pax8: "On Demand", pax10: "On Demand", pax12: "On Demand" }
-    ]
+    ],
+    whyChooseUs: [
+      "In-Depth City Coverage: Unlike quick day-trips, our stay packages allow you to absorb the peaceful mornings and vibrant nights of both Kashi and Prayag.",
+      "Religious Milestone Coordination: We ensure your visit aligns with high-energy rituals like the Ganga Aarti and Sangam Snan (Holy Dip).",
+      "Verified Accommodations: Relax in handpicked hotels known for their spiritual ambiance and premium service standards."
+    ],
+    faqs: [
+      { q: "What is inclusive in the spiritual sightseeing of Prayagraj?", a: "The tour includes documented visits to the Triveni Sangam, the historic Allahabad Fort, Khusro Bagh, Anand Bhavan, and the Swaraj Bhawan. We provide an expert driver-guide for all locations." },
+      { q: "Can we add a visit to Ayodhya to this 4-day tour?", a: "Yes, this package can be customized or upgraded to our 'Varanasi Ayodhya Divine Tour' if you wish to include the Ram Janmabhoomi Darshan." }
+    ],
+    seoContent: `
+      <p>The <strong>Varanasi & Prayagraj Stay Tour</strong> is our most popular 4-day spiritual immersion. By staying overnight in both Kashi and Prayagraj, you go beyond a checklist visit and truly experience the pulse of these holy cities. This package is ideal for families and seniors seeking a relaxed yet profound pilgrimage.</p>
+      
+      <h3>Purity of the Triveni Sangam</h3>
+      <p>Prayagraj is the king of all pilgrimages (Tirtharaj). The convergence of the three holiest rivers creates an energy field that is unparalleled. Our 4-day tour ensures you have a private boat for the Sangam visit, allowing you ample time for rituals and a holy dip at the most auspicious coordinates. We also visit the Akshayavat (the eternal banyan tree) situated inside the fort, a site of immense mythological importance.</p>
+    `
   },
   {
     slug: "varanasi-ayodhya-divine-3n-4d",
@@ -138,10 +199,25 @@ export const packages: TourPackage[] = [
       { day: 4, title: "Varanasi to Sarnath Local Sightseeing and drop", activities: ["Morning after breakfast Check out from hotel and Visit Sarnath: Visit Chukhandi Stupa, Sarnath Museum, Dhamek Stupa, Golden Temple, Deer Park, Tibetan Temple and Local market and then drop at Airport or Railway stations."], image: "https://images.unsplash.com/photo-1704872833406-1536a3d3e613?auto=format&fit=crop&q=80&w=1200" }
     ],
     pricingTable: [
-      { category: "Deluxe", pax2: "11,700/-", pax4: "8,900/-", pax6: "8,000/-", pax8: "On Demand", pax10: "On Demand", pax12: "On Demand" },
-      { category: "Super Deluxe", pax2: "12,900/-", pax4: "10,200/-", pax6: "9,200/-", pax8: "On Demand", pax10: "On Demand", pax12: "On Demand" },
-      { category: "Luxury", pax2: "14,200/-", pax4: "11,500/-", pax6: "10,400/-", pax8: "On Demand", pax10: "On Demand", pax12: "On Demand" }
-    ]
+      { category: "Deluxe", pax2: "12,500/-", pax4: "9,000/-", pax6: "8,000/-", pax8: "On Demand", pax10: "On Demand", pax12: "On Demand" },
+      { category: "Super Deluxe", pax2: "13,800/-", pax4: "10,500/-", pax6: "9,400/-", pax8: "On Demand", pax10: "On Demand", pax12: "On Demand" },
+      { category: "Luxury", pax2: "15,200/-", pax4: "11,800/-", pax6: "10,700/-", pax8: "On Demand", pax10: "On Demand", pax12: "On Demand" }
+    ],
+    whyChooseUs: [
+      "The Ultimate Spiritual Connection: Experience the birthplace of Lord Rama and the city of Lord Shiva in one seamless luxury circuit.",
+      "Ram Mandir Darshan Priority: We provide the latest updates on Darshan timings and ensure your visit to the Ram Janmabhoomi is organized and comfortable.",
+      "Bilingual Spiritual Guides: Our guides speak Hindi and English fluently, bridging the gap between ancient Sanskrit rituals and your understanding."
+    ],
+    faqs: [
+      { q: "Is the new Ram Mandir in Ayodhya fully open for Darshan?", a: "Yes, the Shri Ram Janmabhoomi Mandir is open for devotees. We coordinate your visit to ensure you have a smooth Darshan of Ram Lalla." },
+      { q: "What is the distance between Varanasi and Ayodhya?", a: "The distance is approximately 200 km, which takes about 4-5 hours by road via the Purvanchal Expressway or the NH-730. Our luxury AC vehicles make this journey very comfortable." }
+    ],
+    seoContent: `
+      <p>Our <strong>Varanasi & Ayodhya Divine Tour</strong> is the quintessential North India pilgrimage for 2024-2025. This 4-day tour connects Kashi, the city of liberation, with Ayodhya, the city of Dharma. It is a journey through the epic landscapes of the Ramayana and the Puranas, designed for the modern devotee who values both tradition and comfort.</p>
+      
+      <h3>Ayodhya: A New Era of Spirituality</h3>
+      <p>With the grand opening of the Ram Mandir, Ayodhya has become a global destination for spiritual seekers. Our tour takes you to <strong>Hanuman Garhi</strong>, the <strong>Sarayu Ghat</strong> for the evening Aarti, and the <strong>Shri Ram Janmabhoomi</strong>. We provide deep historical context to the recent developments, making your visit enlightening and emotionally resonant.</p>
+    `
   },
   {
     slug: "gaya-varanasi-prayagraj-4n-5d",

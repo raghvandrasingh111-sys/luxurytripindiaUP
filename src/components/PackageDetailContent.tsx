@@ -11,7 +11,7 @@ export default function PackageDetailContent({ pkg }: { pkg: TourPackage }) {
   return (
     <>
       <Navbar />
-      
+
       {/* Detail Hero */}
       <section className="detail-hero" style={{
         padding: '160px 5% 100px',
@@ -31,19 +31,74 @@ export default function PackageDetailContent({ pkg }: { pkg: TourPackage }) {
 
       {/* Main Content Area */}
       <div className="container main-layout-grid">
-        
+
         {/* Left Column: Itinerary & Details */}
         <div className="main-content">
           <div className="intro-text">
-             <h2 style={{ fontSize: '2.2rem', color: '#2B3036' }}>Experience {pkg.name}</h2>
-             <p style={{ fontSize: '1.1rem', color: '#666', marginTop: '15px', lineHeight: '1.8' }}>
-               This carefully curated {pkg.duration} tour is designed to immerse you in the spiritual atmosphere and cultural richness of {pkg.location}. 
-               From exploring ancient temples to experiencing the divine Sarayu Aarti, every moment is planned for your comfort and enlightenment.
-             </p>
+            <h2 style={{ fontSize: '2.2rem', color: '#2B3036' }}>Experience {pkg.name}</h2>
+            <p style={{ fontSize: '1.1rem', color: '#666', marginTop: '15px', lineHeight: '1.8' }}>
+              This carefully curated {pkg.duration} tour is designed to immerse you in the spiritual atmosphere and cultural richness of {pkg.location}.
+              From exploring ancient temples to experiencing the divine Sarayu Aarti, every moment is planned for your comfort and enlightenment.
+            </p>
           </div>
-          
+
           <PackageItinerary itinerary={pkg.itinerary} />
 
+          {/* Why Choose Us Section */}
+          {pkg.whyChooseUs && (
+            <div className="seo-section" style={{ marginTop: '50px' }}>
+              <h2 style={{ fontSize: '2.2rem', color: '#2B3036', marginBottom: '25px' }}>Why Choose Our {pkg.name}?</h2>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+                {pkg.whyChooseUs.map((point, index) => (
+                  <div key={index} style={{ padding: '20px', background: '#fff', border: '1px solid #eee', borderRadius: '12px', display: 'flex', gap: '15px' }}>
+                    <div style={{ color: '#FF8C00', fontSize: '1.2rem', fontWeight: 'bold' }}>0{index + 1}.</div>
+                    <div style={{ color: '#555', lineHeight: '1.6' }}>{point}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Long SEO Content Section */}
+          {pkg.seoContent && (
+            <div className="seo-section" style={{ marginTop: '50px', lineHeight: '1.8', color: '#444' }}>
+              <h2 style={{ fontSize: '2.2rem', color: '#2B3036', marginBottom: '20px' }}>Experience Divine Spirituality: A Complete Guide</h2>
+              <div dangerouslySetInnerHTML={{ __html: pkg.seoContent }} className="long-description-content" />
+            </div>
+          )}
+
+          {/* FAQ Section */}
+          {pkg.faqs && (
+            <div className="faq-section" style={{ marginTop: '50px' }}>
+              <h2 style={{ fontSize: '2.2rem', color: '#2B3036', marginBottom: '25px' }}>Frequently Asked Questions (FAQs)</h2>
+              <div className="faq-list" style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
+                {pkg.faqs.map((faq, index) => (
+                  <details key={index} style={{ border: '1px solid #eee', borderRadius: '10px', padding: '15px 25px', cursor: 'pointer' }}>
+                    <summary style={{ fontWeight: '600', color: '#2B3036', fontSize: '1.1rem' }}>{faq.q}</summary>
+                    <div style={{ marginTop: '10px', color: '#666', paddingLeft: '20px', borderLeft: '2px solid #FF8C00' }}>{faq.a}</div>
+                  </details>
+                ))}
+              </div>
+              {/* Structured Data for FAQ */}
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": pkg.faqs.map(faq => ({
+                      "@type": "Question",
+                      "name": faq.q,
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq.a
+                      }
+                    }))
+                  })
+                }}
+              />
+            </div>
+          )}
           {/* Pricing Table Section - Hidden by user request */}
           {/* {pkg.pricingTable && (
             <div className="pricing-section" style={{ marginTop: '50px' }}>
@@ -135,11 +190,11 @@ export default function PackageDetailContent({ pkg }: { pkg: TourPackage }) {
 
         {/* Right Column: Sidebar */}
         <aside>
-          <PackageSidebar 
+          <PackageSidebar
             duration={pkg.duration}
             inclusions={pkg.inclusions}
           />
-          
+
           <div className="detailed-costing" style={{ marginTop: '30px', padding: '25px', background: '#f8f9fa', borderRadius: '15px' }}>
             <h4 style={{ marginBottom: '15px', color: '#2B3036' }}>Cost Inclusions</h4>
             <ul style={{ listStyle: 'none', padding: 0, fontSize: '0.95rem' }}>
