@@ -15,7 +15,7 @@ const FloatingContact: React.FC = () => {
     }}>
       {/* WhatsApp Button */}
       <a
-        href="https://wa.me/918299525166"
+        href="https://wa.me/919999995475"
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-float"
@@ -44,7 +44,7 @@ const FloatingContact: React.FC = () => {
 
       {/* Call Button */}
       <a
-        href="tel:+918299525166"
+        href="tel:+919999995475"
         className="phone-float"
         style={{
           width: '60px',

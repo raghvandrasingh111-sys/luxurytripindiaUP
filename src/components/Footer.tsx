@@ -102,7 +102,7 @@ export default function Footer() {
             </p>
             <p style={{ margin: 0, display: 'flex', alignItems: 'center', gap: '10px' }}>
               <i className="fas fa-phone-volume" style={{ color: 'var(--primary-orange)' }}></i>
-              <span>Office: <a href="tel:+919899079804" style={{ color: 'white', textDecoration: 'none' }}>+91-9899079804</a></span>
+              <span>Support: <a href="tel:+919999995475" style={{ color: 'white', textDecoration: 'none' }}>+91-9999995475</a></span>
             </p>
           </div>
         </div>

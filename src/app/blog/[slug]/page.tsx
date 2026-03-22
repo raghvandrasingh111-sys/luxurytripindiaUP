@@ -134,7 +134,7 @@ const BlogPostPage = async ({ params }: Props) => {
                 fontWeight: 'bold',
                 fontSize: '1.1rem'
               }}>Explore All Packages</a>
-              <a href="https://wa.me/918299525166" style={{
+              <a href="https://wa.me/919999995475" style={{
                 background: 'transparent',
                 color: '#fff',
                 padding: '18px 40px',
