@@ -428,19 +428,7 @@ export default function Home() {
           pointerEvents: 'none',
           backgroundColor: '#000'
         }}>
-          {/* Preload Image to hide black screen/latency */}
-          <div style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            backgroundImage: 'url("https://varanasiayodhya.com/wp-content/uploads/Rectangle-5632.png.webp")',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            zIndex: 1,
-            opacity: 0.8
-          }}></div>
+          {/* Video Layer */}
 
           <iframe
             src="https://www.youtube.com/embed/rDsOi3MByCI?controls=0&rel=0&playsinline=1&autoplay=1&mute=1&loop=1&playlist=rDsOi3MByCI&start=10&showinfo=0&modestbranding=1&iv_load_policy=3&disablekb=1"
