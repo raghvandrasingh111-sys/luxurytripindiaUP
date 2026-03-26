@@ -165,11 +165,14 @@ export default function Home() {
       {/* Intro Section */}
       <section className="section-padding container" style={{ textAlign: 'center' }}>
         <div ref={addToRefs} className="fade-in-up">
-          <p style={{ color: 'var(--primary-orange)', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '2px' }}>Welcome To Varanasi Ayodhya</p>
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>Experience the Spiritual Essence of UP</h2>
-          <p style={{ maxWidth: '800px', margin: '0 auto', color: '#666' }}>
-            Embark on a soul-stirring journey through the most sacred cities of India. From the ancient ghats of Varanasi to the divine birthplace of Lord Rama in Ayodhya, we provide curated travel experiences that blend spirituality with comfort.
+          <p style={{ color: 'var(--primary-orange)', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '2px' }}>Welcome To Ram Kashi Yatra</p>
+          <h2 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>Your Gateway to Spiritual Kashi & Divine Ayodhya</h2>
+          <p style={{ maxWidth: '800px', margin: '0 auto', color: '#666', lineHeight: '1.8' }}>
+            Experience the soul-stirring divinity of India's holiest cities with **Ram Kashi Yatra**. Our specialized tour packages bring you closer to the heart of the Ganga Aarti in Varanasi, the grand Ram Mandir in Ayodhya, and the holy Sangam in Prayagraj. We handle every detail — from VIP Temple Darshan and luxury stays to expert-guided city tours — so you can focus on your spiritual elevation.
           </p>
+          <div style={{ marginTop: '30px' }}>
+            <Link href="/tour-packages" className="btn-primary">View Our 2026 Itineraries</Link>
+          </div>
         </div>
       </section>
 
@@ -321,35 +324,36 @@ export default function Home() {
         <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '60px' }}>
             <div ref={addToRefs} className="fade-in-up">
-              <h2 style={{ fontSize: '2.5rem', marginBottom: '25px', color: '#1a1a1a' }}>Why Choose Luxury Trip India?</h2>
+              <h2 style={{ fontSize: '2.5rem', marginBottom: '25px', color: '#1a1a1a' }}>Why Choose Ram Kashi Yatra?</h2>
               <p style={{ fontSize: '1.1rem', color: '#4b5563', lineHeight: '1.8', marginBottom: '20px' }}>
-                At Luxury Trip India, we specialize in crafting the most immersive and **Customized Ayodhya Varanasi Tour Packages** tailored to your spiritual and logistical needs. Our team understands that a journey to the heart of Uttar Pradesh is more than just a vacation; it's a soul-stirring experience that connects you with centuries of heritage.
+                We don't just provide tours; we create life-changing spiritual experiences. Our **Kashi Ayodhya Tour Packages** are designed by locals who know every corner of these sacred lands. 
               </p>
               <p style={{ fontSize: '1.1rem', color: '#4b5563', lineHeight: '1.8', marginBottom: '20px' }}>
-                Whether you are looking for a quick 2-day trip or an extensive spiritual circuit, our **Ayodhya Varanasi Tour Packages** offer unmatched comfort, expert guides, and seamless transfers. We pride ourselves on our local knowledge, ensuring you witness the Ganga Aarti from the best vantage points and visit the most divine temples without the stress of planning.
+                Your journey with us includes **VIP Kashi Vishwanath Darshan**, reserved seating at the **Ganga Aarti**, premium AC transportation, and stays in handpicked luxury hotels. Whether it's your first pilgrimage or a family tradition, we ensure a seamless, divine connection with the gods.
               </p>
-              <ul style={{ listStyle: 'none', padding: 0 }}>
-                {['Expert Local Guides', '24/7 On-Ground Support', 'Comfortable AC Vehicles', 'Handpicked Luxury Accommodations'].map((item, i) => (
+              <ul style={{ listStyle: 'none', padding: 0, marginBottom: '30px' }}>
+                {['Direct Ram Mandir Entry Support', 'Experienced Spiritual Guides', 'Sanitized AC Cabs & Skilled Pilots', 'Luxury Stays near the Holy Rivers'].map((item, i) => (
                   <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px', color: '#1a1a1a', fontWeight: '600' }}>
                     <i className="fas fa-check-circle" style={{ color: 'var(--primary-orange)' }}></i> {item}
                   </li>
                 ))}
               </ul>
+              <Link href="/enquire-now" className="btn-primary">Book Your Divine Trip Today</Link>
             </div>
             <div ref={addToRefs} className="fade-in-up" style={{ backgroundColor: 'white', padding: '40px', borderRadius: '30px', boxShadow: '0 20px 40px rgba(0,0,0,0.05)' }}>
-              <h3 style={{ fontSize: '1.8rem', marginBottom: '20px', color: '#1a1a1a' }}>Spiritual Highlights</h3>
+              <h3 style={{ fontSize: '1.8rem', marginBottom: '20px', color: '#1a1a1a' }}>What's Included in Every Package</h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
                 <div>
-                  <h4 style={{ color: 'var(--primary-orange)', fontWeight: '700', fontSize: '1.1rem' }}>Varanasi (Kashi)</h4>
-                  <p style={{ fontSize: '0.95rem', color: '#666', marginTop: '5px' }}>Experience the timeless rituals at Dashashwamedh Ghat and the serenity of <Link href="/tour-packages" style={{ color: 'inherit', textDecoration: 'underline' }}>Sarnath</Link> where Buddha preached his first sermon.</p>
+                  <h4 style={{ color: 'var(--primary-orange)', fontWeight: '700', fontSize: '1.1rem' }}>Varanasi Spiritual Immersion</h4>
+                  <p style={{ fontSize: '0.95rem', color: '#666', marginTop: '5px' }}>Includes Ganga Aarti by boat, Baba Vishwanath Sugam Darshan, and a cultural walk through the ancient Galis of Kashi.</p>
                 </div>
                 <div>
-                  <h4 style={{ color: 'var(--primary-orange)', fontWeight: '700', fontSize: '1.1rem' }}>Ayodhya (Ram Janmabhoomi)</h4>
-                  <p style={{ fontSize: '0.95rem', color: '#666', marginTop: '5px' }}>Visit the grand <Link href="/tour-packages" style={{ color: 'inherit', textDecoration: 'underline' }}>Ram Mandir</Link>, Hanuman Garhi, and the holy banks of the Saryu River in the birthplace of Lord Rama.</p>
+                  <h4 style={{ color: 'var(--primary-orange)', fontWeight: '700', fontSize: '1.1rem' }}>Ayodhya Divine Residency</h4>
+                  <p style={{ fontSize: '0.95rem', color: '#666', marginTop: '5px' }}>Guided visit to the **Ram Janmabhoomi Mandir**, Hanuman Garhi, and soulful Saryu Aarti with experts who share the Ramayana legends.</p>
                 </div>
                 <div>
-                  <h4 style={{ color: 'var(--primary-orange)', fontWeight: '700', fontSize: '1.1rem' }}>Prayagraj (Sangam)</h4>
-                  <p style={{ fontSize: '0.95rem', color: '#666', marginTop: '5px' }}>Witness the sacred confluence of Ganga, Yamuna, and mythical Saraswati, a must-visit for every <Link href="/tour-packages" style={{ color: 'inherit', textDecoration: 'underline' }}>spiritual seeker</Link>.</p>
+                  <h4 style={{ color: 'var(--primary-orange)', fontWeight: '700', fontSize: '1.1rem' }}>Prayagraj Holy Dip</h4>
+                  <p style={{ fontSize: '0.95rem', color: '#666', marginTop: '5px' }}>Private boat ride to the **Sangam** (Confluence of 3 rivers) and visits to the Akshayavat and Sleeping Hanuman Temple.</p>
                 </div>
               </div>
             </div>
