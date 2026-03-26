@@ -7,10 +7,10 @@ import FloatingContact from "@/components/FloatingContact";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.ramkashiyatra.com"),
   title: {
-    default: "Kashi Ayodhya Tour Packages 2026 | Ram Kashi Yatra",
+    default: "Kashi Ayodhya Tour Package 2026 | Best Price Kashi Yatra Packages",
     template: "%s | Ram Kashi Yatra"
   },
-  description: "Book affordable Kashi Yatra & Ayodhya tour packages with Ram Kashi Yatra. मंदिर दर्शन, hotel, travel included. Best prices for 2026 spiritual journeys.",
+  description: "Book Kashi Ayodhya tour packages at best price. मंदिर दर्शन, hotel, travel included. Affordable & customizable packages. Call now!",
   keywords: [
     "kashi yatra package",
     "ayodhya tour package",

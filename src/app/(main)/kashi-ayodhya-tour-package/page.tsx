@@ -4,9 +4,9 @@ import PackageCard from '@/components/PackageCard';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Kashi Ayodhya Tour Package 2026 | Combined Spiritual Journey | Ram Kashi Yatra',
-  description: 'Book specialized Kashi Ayodhya tour packages for 2026. Complete spiritual circuit including Ram Mandir, Kashi Vishwanath, and Prayagraj Sangam.',
-  keywords: ['kashi ayodhya tour package', 'kashi yatra package', 'spiritual tour india'],
+  title: 'Kashi Ayodhya Tour Package 3 Days | Best Price Pilgrimage Tour',
+  description: 'Our Kashi Ayodhya Tour Package combines two of the most sacred destinations in India. Perfect for devotees who want a complete spiritual journey.',
+  keywords: ['kashi ayodhya tour package', 'kashi ayodhya tour package 3 days', 'spiritual tour india'],
 };
 
 export default function KashiAyodhyaLanding() {
@@ -29,7 +29,7 @@ export default function KashiAyodhyaLanding() {
         color: 'white',
         textAlign: 'center'
       }}>
-        <h1 style={{ fontSize: '3.5rem', marginBottom: '10px' }}>Kashi Ayodhya Tour Packages</h1>
+        <h1 style={{ fontSize: '3.5rem', marginBottom: '10px' }}>Kashi Ayodhya Tour Package</h1>
         <p style={{ fontSize: '1.2rem' }}>The ultimate spiritual journey through India's holiest cities</p>
       </section>
 

@@ -4,9 +4,9 @@ import PackageCard from '@/components/PackageCard';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Kashi Yatra Package Price 2026 | Varanasi Tour Booking | Ram Kashi Yatra',
-  description: 'Check out the best Kashi Yatra package price for 2026. Affordable Varanasi tour booking including Kashi Vishwanath Darshan, hotel, and travel.',
-  keywords: ['kashi yatra package price', 'kashi yatra package booking', 'varanasi tour package cost'],
+  title: 'Kashi Yatra Package | Varanasi Tour Package with Ganga Aarti',
+  description: 'Book the best Kashi Yatra package. Includes Kashi Vishwanath Temple darshan, Ganga Aarti, boat ride, and expert guided tours in Varanasi.',
+  keywords: ['kashi yatra package', 'varanasi tour package', 'kashi darshan package cost'],
 };
 
 export default function KashiYatraLanding() {
@@ -30,8 +30,8 @@ export default function KashiYatraLanding() {
         color: 'white',
         textAlign: 'center'
       }}>
-        <h1 style={{ fontSize: '3.5rem', marginBottom: '10px' }}>Kashi Yatra Package Price & Booking 2026</h1>
-        <p style={{ fontSize: '1.2rem' }}>Experience the eternal divinity of the world's oldest living city</p>
+        <h1 style={{ fontSize: '3.5rem', marginBottom: '10px' }}>Kashi Yatra Package</h1>
+        <p style={{ fontSize: '1.2rem' }}>Experience the spiritual essence of Varanasi with our Kashi Yatra Package.</p>
       </section>
 
       <div className="container section-padding">
@@ -42,6 +42,17 @@ export default function KashiYatraLanding() {
         ]} />
 
         <div style={{ marginTop: '50px' }}>
+          <div style={{ marginBottom: '40px', lineHeight: '1.8', color: '#444' }}>
+            <p style={{ fontSize: '1.1rem', marginBottom: '20px' }}>Known as the city of Lord Shiva, Kashi is one of the holiest places in India. Our package includes Kashi Vishwanath Temple darshan, Ganga Aarti, boat ride, and visits to famous ghats. We ensure a smooth and comfortable यात्रा with hotel, transport, and guided tours.</p>
+            
+            <h3 style={{ fontSize: '1.5rem', marginBottom: '15px' }}>Detailed Itinerary</h3>
+            <ul style={{ listStyle: 'none', padding: 0 }}>
+              <li style={{ marginBottom: '10px' }}><strong>Day 1:</strong> Arrival + Ganga Aarti</li>
+              <li style={{ marginBottom: '10px' }}><strong>Day 2:</strong> Temple Darshan + Local Sightseeing</li>
+              <li style={{ marginBottom: '10px' }}><strong>Day 3:</strong> Departure</li>
+            </ul>
+          </div>
+
           <h2 style={{ fontSize: '2rem', marginBottom: '30px' }}>Our Best Selling Kashi Yatra Packages</h2>
           <div style={{
             display: 'grid',

@@ -168,10 +168,15 @@ export default function Home() {
           <p style={{ color: 'var(--primary-orange)', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '2px' }}>Welcome To Ram Kashi Yatra</p>
           <h2 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>Your Gateway to Spiritual Kashi & Divine Ayodhya</h2>
           <p style={{ maxWidth: '800px', margin: '0 auto', color: '#666', lineHeight: '1.8' }}>
-            Experience the soul-stirring divinity of India's holiest cities with **Ram Kashi Yatra**. Our specialized tour packages bring you closer to the heart of the Ganga Aarti in Varanasi, the grand Ram Mandir in Ayodhya, and the holy Sangam in Prayagraj. We handle every detail — from VIP Temple Darshan and luxury stays to expert-guided city tours — so you can focus on your spiritual elevation.
+            Welcome to **Ram Kashi Yatra**, your trusted partner for spiritual journeys. We offer the best **Kashi Ayodhya Tour Packages** designed for comfort, affordability, and divine experience. 
           </p>
-          <div style={{ marginTop: '30px' }}>
-            <Link href="/tour-packages" className="btn-primary">View Our 2026 Itineraries</Link>
+          <p style={{ maxWidth: '800px', margin: '20px auto 0', color: '#666', lineHeight: '1.8' }}>
+            Our packages cover all major destinations including **Kashi Vishwanath Temple**, **Ganga Aarti** in Varanasi, and **Shri Ram Mandir** in Ayodhya. We handle everything from hotel booking to local transport so you can focus on your spiritual यात्रा.
+          </p>
+          <div style={{ marginTop: '30px', display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Link href="/tour-packages" className="btn-primary">Book Now</Link>
+            <a href="tel:+919999995475" className="btn-secondary" style={{ backgroundColor: '#2563eb', color: 'white', border: 'none' }}>Call Now</a>
+            <a href="https://wa.me/919999995475" className="btn-secondary" style={{ backgroundColor: '#22c55e', color: 'white', border: 'none' }}>WhatsApp Now</a>
           </div>
         </div>
       </section>
