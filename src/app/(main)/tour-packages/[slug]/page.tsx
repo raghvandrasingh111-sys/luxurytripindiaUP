@@ -93,6 +93,19 @@ export default async function PackageDetailPage({ params }: Props) {
     ]
   };
 
+  const faqLd = pkg.faqs && pkg.faqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": pkg.faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a
+      }
+    }))
+  } : null;
+
   return (
     <>
       <script
@@ -103,6 +116,12 @@ export default async function PackageDetailPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
+      {faqLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        />
+      )}
       <PackageDetailContent pkg={pkg} />
     </>
   );

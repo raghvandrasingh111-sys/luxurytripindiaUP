@@ -75,42 +75,57 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "TravelAgency",
-              "name": "Luxury Trip India",
-              "url": "https://varanasiayodhya.com",
-              "logo": "https://luxurytripindia.com/img/logo-luxury.png",
-              "image": "https://varanasiayodhya.com/og-image.jpg",
-              "description": "Leading travel agency for spiritual and cultural tours in North India, specializing in Varanasi, Ayodhya, Prayagraj, and Lucknow tour packages.",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "F2/30, Imlok -02 M Near Taj, Nadesar",
-                "addressLocality": "Varanasi",
-                "addressRegion": "Uttar Pradesh",
-                "postalCode": "221002",
-                "addressCountry": "IN"
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "TravelAgency",
+                "name": "Luxury Trip India",
+                "url": "https://varanasiayodhya.com",
+                "logo": "https://luxurytripindia.com/img/logo-luxury.png",
+                "image": "https://varanasiayodhya.com/og-image.jpg",
+                "description": "Leading travel agency for spiritual and cultural tours in North India, specializing in Varanasi, Ayodhya, Prayagraj, and Lucknow tour packages.",
+                "foundingDate": "2015",
+                "areaServed": ["Varanasi", "Ayodhya", "Prayagraj", "Lucknow", "Gaya"],
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "F2/30, Imlok -02 M Near Taj, Nadesar",
+                  "addressLocality": "Varanasi",
+                  "addressRegion": "Uttar Pradesh",
+                  "postalCode": "221002",
+                  "addressCountry": "IN"
+                },
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": "25.3331",
+                  "longitude": "82.9772"
+                },
+                "telephone": "+91-9999995475",
+                "priceRange": "$$",
+                "openingHoursSpecification": [
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                    "opens": "08:00",
+                    "closes": "20:00"
+                  }
+                ],
+                "sameAs": [
+                  "https://www.facebook.com/profile.php?id=61564188934197",
+                  "https://www.instagram.com/luxurytripindia"
+                ]
               },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": "25.3331",
-                "longitude": "82.9772"
-              },
-              "telephone": "+91-9999995475",
-              "priceRange": "$$",
-              "openingHoursSpecification": [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                  "opens": "08:00",
-                  "closes": "20:00"
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "url": "https://varanasiayodhya.com",
+                "name": "Luxury Trip India",
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "https://varanasiayodhya.com/tour-packages?q={search_term_string}",
+                  "query-input": "required name=search_term_string"
                 }
-              ],
-              "sameAs": [
-                "https://www.facebook.com/profile.php?id=61564188934197",
-                "https://www.instagram.com/luxurytripindia"
-              ]
-            })
+              }
+            ])
           }}
         />
         <Navbar />

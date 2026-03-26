@@ -36,8 +36,66 @@ const BlogPostPage = async ({ params }: Props) => {
 
   if (!post) notFound();
 
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "description": post.excerpt,
+    "image": post.image,
+    "author": {
+      "@type": "Person",
+      "name": post.author
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Luxury Trip India",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://luxurytripindia.com/img/logo-luxury.png"
+      }
+    },
+    "datePublished": new Date(post.date).toISOString().split('T')[0],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://varanasiayodhya.com/blog/${post.slug}`
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://varanasiayodhya.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://varanasiayodhya.com/blog"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": post.title,
+        "item": `https://varanasiayodhya.com/blog/${post.slug}`
+      }
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <main style={{ paddingTop: '120px' }}>
         <article className="container" style={{ padding: '0 5%', maxWidth: '900px', margin: '0 auto' }}>
           <Breadcrumbs 
