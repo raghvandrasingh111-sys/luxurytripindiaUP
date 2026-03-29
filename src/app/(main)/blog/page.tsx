@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 import { blogs } from '@/data/blogs';
 
 export const metadata: Metadata = {
-  title: 'Spiritual Travel Blog: Kashi, Ayodhya & Beyond | Luxury Trip India',
+  title: 'Spiritual Travel Blog: Kashi, Ayodhya & Beyond | Ram Kashi Yatra',
   description: 'Expert guides, travel tips, and spiritual insights into the holiest cities of India. Learn about Kashi Vishwanath VIP Darshan, Ram Mandir timings, and more.',
 };
 

@@ -47,7 +47,7 @@ const CityPackagesPage = async ({ params }: Props) => {
               Varanasi Ayodhya Tour Package from {cityName}
             </h1>
             <p style={{ fontSize: '1.2rem', color: '#666', lineHeight: '1.8', maxWidth: '900px' }}>
-              Plan your divine pilgrimage to the holiest cities of India with Luxury Trip India. We offer specialized, all-inclusive 
+              Plan your divine pilgrimage to the holiest cities of India with Ram Kashi Yatra. We offer specialized, all-inclusive 
               <strong> Varanasi and Ayodhya tour packages from {cityName}</strong>, featuring seamless flight/train connectivity, 
               premium AC transfers, and handpicked luxury accommodations. Experience the magic of the Ganga Aarti and the 
               divinity of the Ram Mandir with our expert-led journeys.

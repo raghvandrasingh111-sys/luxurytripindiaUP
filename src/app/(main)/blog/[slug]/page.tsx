@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return { title: 'Post Not Found' };
   
   return {
-    title: `${post.title} | Luxury Trip India Blog`,
+    title: `${post.title} | Ram Kashi Yatra Blog`,
     description: post.excerpt,
     keywords: post.tags,
   };
@@ -48,7 +48,7 @@ const BlogPostPage = async ({ params }: Props) => {
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Luxury Trip India",
+      "name": "Ram Kashi Yatra",
       "logo": {
         "@type": "ImageObject",
         "url": "https://luxurytripindia.com/img/logo-luxury.png"
