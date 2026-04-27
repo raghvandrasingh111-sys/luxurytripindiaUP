@@ -10,6 +10,7 @@ interface PackageCardProps {
   title: string;
   href: string;
   imageAlt?: string;
+  priority?: boolean;
 }
 
 export default function PackageCard({
@@ -18,7 +19,8 @@ export default function PackageCard({
   location,
   title,
   href,
-  imageAlt
+  imageAlt,
+  priority
 }: PackageCardProps) {
   return (
     <div className="package-card" style={{
@@ -34,6 +36,7 @@ export default function PackageCard({
           src={image}
           alt={imageAlt || title}
           fill
+          priority={priority}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           style={{ objectFit: 'cover', transition: 'transform 0.6s ease' }}
           className="card-image"

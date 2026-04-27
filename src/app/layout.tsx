@@ -1,4 +1,27 @@
 import type { Metadata } from "next";
+import { Poppins, Plus_Jakarta_Sans, Dancing_Script } from 'next/font/google';
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-poppins',
+  display: 'swap',
+});
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-jakarta',
+  display: 'swap',
+});
+
+const dancingScript = Dancing_Script({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-dancing',
+  display: 'swap',
+});
+
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -73,7 +96,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${poppins.variable} ${plusJakartaSans.variable} ${dancingScript.variable}`}>
       <head>
         <link
           rel="stylesheet"

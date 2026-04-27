@@ -1,6 +1,5 @@
-"use client";
-
 import React, { useState, useEffect, useRef } from 'react';
+import NextImage from 'next/image';
 
 interface Hotel {
   name: string;
@@ -19,9 +18,11 @@ export default function CityHotelCarousel({ title, hotels }: CityHotelCarouselPr
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 768) setItemsToShow(1);
-      else if (window.innerWidth < 1024) setItemsToShow(3);
-      else setItemsToShow(5);
+      if (typeof window !== 'undefined') {
+        if (window.innerWidth < 768) setItemsToShow(1);
+        else if (window.innerWidth < 1024) setItemsToShow(3);
+        else setItemsToShow(5);
+      }
     };
     handleResize();
     window.addEventListener('resize', handleResize);
@@ -76,12 +77,12 @@ export default function CityHotelCarousel({ title, hotels }: CityHotelCarouselPr
                   height: '100%'
                 }}>
                   <div style={{ position: 'relative', height: '200px' }}>
-                    <img 
+                    <NextImage 
                       src={hotel.image} 
                       alt={hotel.name}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 20vw"
                       style={{ 
-                        width: '100%', 
-                        height: '100%', 
                         objectFit: 'cover' 
                       }}
                     />

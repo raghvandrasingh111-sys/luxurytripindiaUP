@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import CityHotelCarousel from '@/components/CityHotelCarousel';
+import NextImage from 'next/image';
 
 export default function Hotels() {
   const [heroIndex, setHeroIndex] = useState(0);
@@ -59,7 +60,7 @@ export default function Hotels() {
     <main style={{ backgroundColor: '#fff' }}>
 
       {/* Hero Slideshow */}
-      <section style={{ height: '90vh', position: 'relative', overflow: 'hidden' }}>
+      <section style={{ height: '90vh', position: 'relative', overflow: 'hidden', backgroundColor: '#000' }}>
         {heroImages.map((img, i) => (
           <div
             key={i}
@@ -69,14 +70,20 @@ export default function Hotels() {
               left: 0,
               width: '100%',
               height: '100%',
-              backgroundImage: `url(${img})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
               opacity: heroIndex === i ? 1 : 0,
               transition: 'opacity 1.5s ease-in-out',
               zIndex: 1
             }}
-          />
+          >
+            <NextImage
+              src={img}
+              alt={`Luxury Hotels in ${i === 0 ? 'Varanasi' : 'Ayodhya'}`}
+              fill
+              priority={i === 0}
+              style={{ objectFit: 'cover' }}
+              sizes="100vw"
+            />
+          </div>
         ))}
         <div style={{
           position: 'absolute',

@@ -3,9 +3,11 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import PackageCard from '@/components/PackageCard';
 import Link from 'next/link';
+import NextImage from 'next/image';
 import HotelCarousel from '@/components/HotelCarousel';
 import ApprovalCarousel from '@/components/ApprovalCarousel';
 import Testimonials from '@/components/Testimonials';
+import LiteInstagram from '@/components/LiteInstagram';
 import { packages as allTourPackages } from '@/data/packages';
 
 /* ── Animated Counter Component ──────────────────── */
@@ -189,9 +191,10 @@ export default function Home() {
         alignItems: 'center',
         color: 'white',
         textAlign: 'center',
-        padding: '0 5%'
+        padding: '0 5%',
+        backgroundColor: '#000'
       }}>
-        {/* Background Video */}
+        {/* Background Video & Poster */}
         <div style={{
           position: 'absolute',
           top: 0, left: 0,
@@ -199,8 +202,25 @@ export default function Home() {
           zIndex: -1,
           pointerEvents: 'none'
         }}>
+          {/* LCP Poster Image - Shows until video loads */}
+          <div style={{
+            position: 'absolute',
+            top: 0, left: 0,
+            width: '100%', height: '100%',
+            zIndex: 1
+          }}>
+            <NextImage
+              src="/images/destinations/varanasi.webp"
+              alt="Varanasi Spiritual Background"
+              fill
+              priority
+              style={{ objectFit: 'cover' }}
+              sizes="100vw"
+            />
+          </div>
+
           <iframe
-            src="https://www.youtube.com/embed/rDsOi3MByCI?controls=0&rel=0&playsinline=1&autoplay=1&mute=1&loop=1&playlist=rDsOi3MByCI&start=10"
+            src="https://www.youtube.com/embed/rDsOi3MByCI?controls=0&rel=0&playsinline=1&autoplay=1&mute=1&loop=1&playlist=rDsOi3MByCI&start=10&enablejsapi=1"
             style={{
               width: '100vw',
               height: '56.25vw',
@@ -209,18 +229,21 @@ export default function Home() {
               position: 'absolute',
               top: '50%', left: '50%',
               transform: 'translate(-50%, -50%)',
-              objectFit: 'cover'
+              objectFit: 'cover',
+              zIndex: 2,
+              opacity: 0.8 // Slight transparency for the poster to show through until fully opaque
             }}
             frameBorder="0"
             allow="autoplay; encrypted-media"
-            loading="lazy"
             title="Varanasi Spiritual Background Video"
           ></iframe>
+          
           <div style={{
             position: 'absolute',
             top: 0, left: 0,
             width: '100%', height: '100%',
-            background: 'linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.6) 100%)'
+            background: 'linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.6) 100%)',
+            zIndex: 3
           }}></div>
         </div>
 
@@ -237,13 +260,16 @@ export default function Home() {
           >
             Ayodhya • Varanasi • Prayagraj • Chitrakoot
           </p>
-          <h1 style={{
-            fontSize: 'clamp(2.5rem, 5vw, 4rem)',
-            marginBottom: '20px',
-            lineHeight: 1.2,
-            opacity: 0,
-            animation: 'fadeInUp 0.8s ease forwards 0.6s'
-          }}>
+          <h1 
+            id="hero-title"
+            style={{
+              fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+              marginBottom: '20px',
+              lineHeight: 1.2,
+              opacity: 0,
+              animation: 'fadeInUp 0.8s ease forwards 0.6s'
+            }}
+          >
             Best Kashi Ayodhya & Varanasi Tour Packages 2026
           </h1>
           <p style={{
@@ -445,7 +471,7 @@ export default function Home() {
           }}>
             {featuredPackages.map((pkg, index) => (
               <div key={index} ref={addToRefs} className="fade-in-up" style={{ transitionDelay: `${index * 0.1}s` }}>
-                <PackageCard {...pkg} />
+                <PackageCard {...pkg} priority={index < 3} />
               </div>
             ))}
           </div>
@@ -493,30 +519,19 @@ export default function Home() {
         <div style={{ textAlign: 'center', marginBottom: '50px' }}>
           <h2 ref={addToRefs} className="fade-in-up" style={{ fontSize: '2.5rem' }}>Must-Know Verified Travel Tips</h2>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
           {[
             { id: "DCE2LNtSWpi", type: "reel" },
             { id: "DB6STThylM9", type: "reel" },
             { id: "DAa6baUyay_", type: "p" },
             { id: "DREVGCcEnv3", type: "p" }
           ].map((item, index) => (
-            <div key={index} ref={addToRefs} className="fade-in-up" style={{
-              borderRadius: '20px',
-              overflow: 'hidden',
-              boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
-              height: item.type === 'reel' ? '500px' : '400px',
-              backgroundColor: '#f8f9fa'
-            }}>
-              <iframe
-                width="100%"
-                height="100%"
-                src={`https://www.instagram.com/${item.type}/${item.id}/embed`}
-                frameBorder="0"
-                scrolling="no"
-                allowTransparency
-                allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                loading="lazy"
-              ></iframe>
+            <div key={index} ref={addToRefs} className="fade-in-up">
+              <LiteInstagram 
+                id={item.id} 
+                type={item.type} 
+                height={item.type === 'reel' ? '500px' : '400px'} 
+              />
             </div>
           ))}
         </div>
