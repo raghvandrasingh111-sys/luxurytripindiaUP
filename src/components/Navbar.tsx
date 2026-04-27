@@ -64,8 +64,8 @@ export default function Navbar() {
             <Image
               src="/logo-luxury.png"
               alt="Ram Kashi Yatra - Luxury Trip India"
-              width={180}
-              height={70}
+              width={80}
+              height={79}
               style={{ display: 'block' }}
               priority
             />
@@ -161,9 +161,9 @@ export default function Navbar() {
           <Image
             src="/logo-luxury.png"
             alt="Ram Kashi Yatra"
-            width={160}
-            height={55}
-            style={{ height: '55px', width: 'auto' }}
+            width={70}
+            height={69}
+            style={{ height: '69px', width: 'auto' }}
           />
         </div>
         <ul className="mobile-nav-list">

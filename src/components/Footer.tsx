@@ -18,9 +18,9 @@ export default function Footer() {
             <Image
               src="/logo-luxury.png"
               alt="Ram Kashi Yatra"
-              width={220}
-              height={76}
-              style={{ width: '220px', height: 'auto' }}
+              width={120}
+              height={118}
+              style={{ width: '120px', height: 'auto' }}
             />
           </div>
           <p style={{ color: 'rgba(255,255,255,0.7)', marginBottom: '30px', maxWidth: '400px' }}>
